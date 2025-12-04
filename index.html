@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelSnaps - Travel Photography Blog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f3f5f7;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.75);
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 35px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    /* HEADER */
+    header {
+      background: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      margin-bottom: 60px;
+    }
+    header h1 {
+      font-size: 3.8rem;
+      text-shadow: 0 5px 25px rgba(0,0,0,0.6);
+    }
+    header p {
+      font-size: 1.3rem;
+      width: 70%;
+      max-width: 700px;
+      margin-top: 10px;
+      text-shadow: 0 3px 15px rgba(0,0,0,0.7);
+    }
+
+    /* SECTION WRAPPER */
+    section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 50px auto;
+    }
+    h2 {
+      color: #2b3a67;
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .about img {
+      width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+    .about p {
+      flex: 1;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    /* PROJECTS SECTION */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .card .info {
+      padding: 18px;
+    }
+    .card .info h3 {
+      margin: 0 0 10px;
+      font-size: 1.4rem;
+      color: #2b3a67;
+    }
+    .card .info p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* CONTACT SECTION */
+    .contact {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .contact form {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s;
+    }
+    input:focus, textarea:focus {
+      border-color: #2b3a67;
+    }
+    button {
+      padding: 12px 15px;
+      border: none;
+      background: #2b3a67;
+      color: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #1f2b4a;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #2b3a67;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <header id="home">
+    <h1>TravelSnaps Photography</h1>
+    <p>Capturing the beauty of the world, one adventure at a time. Explore my journey through landscapes, cultures, and unforgettable travel moments.</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+    <p>Hello! I'm a passionate travel photographer who roams the world to capture breathtaking stories through lenses. From mountains and oceans to ancient cities and hidden villages, I believe every moment has a unique story worth sharing. Join me in exploring the world's wonders through creativity and art.</p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Photography Projects</h2>
+    <div class="projects">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1100&q=80" />
+        <div class="info">
+          <h3>Mountain Dreams</h3>
+          <p>A collection of stunning high-altitude landscapes capturing the calm, chaos, and charm of mountains across the world.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1100&q=80" />
+        <div class="info">
+          <h3>City Souls</h3>
+          <p>An urban journey through vibrant cultures, street life, architecture, and the pulse of global cities.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1100&q=80" />
+        <div class="info">
+          <h3>Ocean Whispers</h3>
+          <p>Exploring serene beaches, dynamic waves, and the endless charm of coastal life through captivating frames.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <textarea rows="5" placeholder="Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 TravelSnaps Photography | Capturing Moments. Creating Stories.
+  </footer>
+
+</body>
+</html>
